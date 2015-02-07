@@ -44,5 +44,13 @@
     "nodemon": "^1.3.6",
     "uncss": "^0.12.0",
     "vinyl-transform": "^1.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epsclubs/EPSClubs-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/epsclubs/EPSClubs-web/issues"
+  },
+  "homepage": "https://github.com/epsclubs/EPSClubs-web"
 }

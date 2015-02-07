@@ -50,30 +50,50 @@ LoginPage = React.createClass(
                 </div>
     return
   render: ->
-    <div className="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-      <div className="login-panel panel panel-default">
-        <div className="panel-heading">Log in</div>
-        <div className="panel-body">
-          <form role="form" onSubmit={this.handleSubmit} ref="loginForm">
-            {this.state.message}
-            <fieldset>
-              <div className="form-group">
-                <input className="form-control" placeholder="Email/Username" name="username" type="text" ref="username" autofocus="" autoCorrect="off" autoCapitalize="off"/>
-              </div>
-              <div className="form-group">
-                <input className="form-control" placeholder="Password" name="password" type="password" ref="password" />
-              </div>
+    # <div className="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    #   <div className="login-panel panel panel-default">
+    #     <div className="panel-heading">Log in</div>
+    #     <div className="panel-body">
+    #       <form role="form" onSubmit={this.handleSubmit} ref="loginForm">
+    #         {this.state.message}
+    #         <fieldset>
+    #           <div className="form-group">
+    #             <input className="form-control" placeholder="Email/Username" name="username" type="text" ref="username" autofocus="" autoCorrect="off" autoCapitalize="off"/>
+    #           </div>
+    #           <div className="form-group">
+    #             <input className="form-control" placeholder="Password" name="password" type="password" ref="password" />
+    #           </div>
+    #           <div className="checkbox">
+    #             <label>
+    #               <input name="remember" type="checkbox" value="Remember Me" />Remember Me for 10 Days
+    #             </label>
+    #           </div>
+    #           <input className="btn btn-primary" type="submit" value="Login" disabled={this.state.login_disabled}/>
+    #         </fieldset>
+    #       </form>
+    #     </div>
+    #   </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <form className="form-signin" role="form" onSubmit={this.handleSubmit} ref="loginForm">
+              <h2 className="form-signin-heading">Please sign in</h2>
+              {this.state.message}
+              <label for="inputEmail" className="sr-only">Email address</label>
+              <input ref="username" type="text" id="inputEmail" className="form-control" placeholder="Email/Username" required autofocus="" autoCorrect="off" autoCapitalize="off"/>
+              <label for="inputPassword" className="sr-only">Password</label>
+              <input ref="password" type="password" id="inputPassword" className="form-control" placeholder="Password" required />
               <div className="checkbox">
                 <label>
-                  <input name="remember" type="checkbox" value="Remember Me" />Remember Me for 10 Days
+                  <input type="checkbox" value="remember-me" /> Remember me
                 </label>
               </div>
-              <input className="btn btn-primary" type="submit" value="Login" disabled={this.state.login_disabled}/>
-            </fieldset>
-          </form>
+              <button className="btn btn-lg btn-primary btn-block" type="submit" disabled={this.state.login_disabled}>Sign in</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    # </div>
 )
 
 module.exports = LoginPage;

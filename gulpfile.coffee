@@ -67,9 +67,9 @@ gulp.task 'sass', ['start_server'],->
 gulp.task 'start_server', ->
   nodemon(
     script: 'app.coffee'
-    ext: 'coffee handlebars'
+    ext: 'coffee'
     env:  ('NODE_ENV': 'development', 'port': 3000)
-    ignore: ['gulpfile.*']
+    # ignore: ['gulpfile.coffee']
   ).on 'restart', ->
     console.log 'restarted!'
 
@@ -80,6 +80,5 @@ gulp.task 'watch', ->
   gulp.watch './assets/*.cjsx', ['browserify']
   gulp.watch './assets/global/*.cjsx', ['browserify_global']
   gulp.watch './src/scss/*.s*ss', ['sass']
-  gulp.watch './views/**/*.handlebars', ['sass']
 
 gulp.task('default', ['browserify_global', 'browserify', 'sass', 'watch']) ;

@@ -5,6 +5,12 @@ _ = require 'underscore'
 
 module.exports = exports = (app, client, passport) ->
 
+  app.get '/', (req, res) ->
+    if req.isAuthenticated()
+      res.redirect '/me/dashboard'
+    else
+      res.redirect '/welcome'
+      
   app.get '/welcome', (req, res)->
     if req.isAuthenticated() then user = req.user else user = null
     client.get '/menus', (_err, _req, _res, _obj) ->

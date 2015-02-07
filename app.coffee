@@ -25,7 +25,8 @@ hbs = exphbs.create(
   helpers:
     isCurrent: (href, currentUrl)->
       if href == currentUrl then 'active' else null
-
+    isHidden: (bool)->
+      if bool then 'hide' else null
   partialsDir: [
     'views/partials/'
   ]

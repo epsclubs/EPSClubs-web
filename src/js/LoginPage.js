@@ -73,48 +73,51 @@ LoginPage = React.createClass({
   },
   render: function() {
     return React.createElement("div", {
-      "className": "col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4"
+      "className": "container"
     }, React.createElement("div", {
-      "className": "login-panel panel panel-default"
+      "className": "row"
     }, React.createElement("div", {
-      "className": "panel-heading"
-    }, "Log in"), React.createElement("div", {
-      "className": "panel-body"
+      "className": "col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3"
     }, React.createElement("form", {
+      "className": "form-signin",
       "role": "form",
       "onSubmit": this.handleSubmit,
       "ref": "loginForm"
-    }, this.state.message, React.createElement("fieldset", null, React.createElement("div", {
-      "className": "form-group"
-    }, React.createElement("input", {
+    }, React.createElement("h2", {
+      "className": "form-signin-heading"
+    }, "Please sign in"), this.state.message, React.createElement("label", {
+      "for": "inputEmail",
+      "className": "sr-only"
+    }, "Email address"), React.createElement("input", {
+      "ref": "username",
+      "type": "text",
+      "id": "inputEmail",
       "className": "form-control",
       "placeholder": "Email/Username",
-      "name": "username",
-      "type": "text",
-      "ref": "username",
+      "required": true,
       "autofocus": "",
       "autoCorrect": "off",
       "autoCapitalize": "off"
-    })), React.createElement("div", {
-      "className": "form-group"
-    }, React.createElement("input", {
+    }), React.createElement("label", {
+      "for": "inputPassword",
+      "className": "sr-only"
+    }, "Password"), React.createElement("input", {
+      "ref": "password",
+      "type": "password",
+      "id": "inputPassword",
       "className": "form-control",
       "placeholder": "Password",
-      "name": "password",
-      "type": "password",
-      "ref": "password"
-    })), React.createElement("div", {
+      "required": true
+    }), React.createElement("div", {
       "className": "checkbox"
     }, React.createElement("label", null, React.createElement("input", {
-      "name": "remember",
       "type": "checkbox",
-      "value": "Remember Me"
-    }), "Remember Me for 10 Days")), React.createElement("input", {
-      "className": "btn btn-primary",
+      "value": "remember-me"
+    }), " Remember me")), React.createElement("button", {
+      "className": "btn btn-lg btn-primary btn-block",
       "type": "submit",
-      "value": "Login",
       "disabled": this.state.login_disabled
-    }))))));
+    }, "Sign in")))));
   }
 });
 
