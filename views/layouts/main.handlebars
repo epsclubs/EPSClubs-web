@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>{{title}}</title>
+
+    <link href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    {{#unless noTopBar}}
+      <div id="topBar">{{>topbar}}</div>
+    {{/unless}}
+
+    {{#unless noSideBar}}
+      <div id="sideBar">{{>sidebar}}</div>
+    {{/unless}}
+
+    {{{body}}}
+  </body>
+</html>
