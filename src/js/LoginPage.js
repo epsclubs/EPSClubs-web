@@ -125,5 +125,5 @@ module.exports = LoginPage;
 
 if (typeof window !== 'undefined') {
   container = document.getElementById('LoginPage');
-  React.render(LoginPage(), container);
+  React.render(React.createElement(LoginPage, null), container);
 }
