@@ -1,6 +1,6 @@
 exports.options =
   env: 'development'
-  api_url: 'http://benzhang.xyz:8081'
+  api_url: 'http://api.benzhang.xyz/'
 
 exports.convertCjsx = (dir, callback) ->
   console.log 'Environment: Development'
