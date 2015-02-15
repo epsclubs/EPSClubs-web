@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
   less = require('gulp-less'),
-  autoprefixer = require('gulp-autoprefixer'),
   sourcemaps = require('gulp-sourcemaps'),
   handleErrors = require('../util/handleErrors'),
+  autoprefixer = require('gulp-autoprefixer'),
   config = require('../config').less;
 
 gulp.task('less', function() {

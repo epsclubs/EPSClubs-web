@@ -1,29 +1,17 @@
-var dest = './build',
-  src = './src',
-  mui = './node_modules/material-ui/src';
+var dest = './build';
+var src = './src';
+var mui = './node_modules/material-ui/src';
 
 module.exports = {
-  start_server: {
-    file: dest + '/server.js'
-  },
   browserSync: {
     server: {
       // We're serving the src folder as well
       // for sass sourcemap linking
-      // baseDir: [dest, src]
-      proxy: 'http://localhost:3000'
+      baseDir: [dest, src]
     },
     files: [
       dest + '/**'
     ]
-  },
-  app: {
-    src: src + '/app/**/*.jsx',
-    dest: dest + '/app'
-  },
-  server: {
-    src: src + "/server.js",
-    dest: dest
   },
   less: {
     src: src + '/less/main.less',
@@ -31,28 +19,25 @@ module.exports = {
       src + '/less/**',
       mui + '/less/**'
     ],
-    dest: dest + '/public/css'
+    dest: dest
   },
-  views: {
-    src: src + "/views/**",
-    dest: dest + '/views'
+  markup: {
+    src: src + "/www/**",
+    dest: dest
   },
-  fonts: {
-    src: mui + '/less/material-design-fonticons/fonts/**',
-    dest: dest + '/public/fonts/mdfonticon'
-  },
-  muiFonts: {
-    src: mui + '/less/material-ui-icons/fonts/**',
-    dest: dest + '/public/fonts'
+  fontIcons: {
+    src: src + "/less/font-icons/**",
+    dest: dest + '/font-icons'
   },
   browserify: {
     // Enable source maps
     debug: true,
+    extensions: [ '.jsx' ],
     // A separate bundle will be generated for each
     // bundle config in the list below
     bundleConfigs: [{
       entries: src + '/app/app.jsx',
-      dest: dest + '/public/js',
+      dest: dest,
       outputName: 'app.js'
     }]
   }
