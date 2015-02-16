@@ -31,6 +31,7 @@ var Tabs = require('./components/pages/components/tabs.jsx');
 var TextFields = require('./components/pages/components/text-fields.jsx');
 var Toolbars = require('./components/pages/components/toolbars.jsx');
 
+var Clubs = require('./components/pages/clubs.jsx');
 
 /** Routes: https://github.com/rackt/react-router/blob/master/docs/api/components/Route.md
   * 
@@ -45,6 +46,7 @@ var AppRoutes = (
   <Route name="root" path="/" handler={Master}>
     <Route name="home" handler={Home} />
     <Route name="get-started" handler={GetStarted} />
+    <Route name="clubs" handler={Clubs} />
     <Route name="css-framework" handler={CssFramework}>
       <Route name="colors" handler={Colors} />
       <Route name="typography" handler={Typography} />

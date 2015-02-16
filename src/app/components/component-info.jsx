@@ -19,7 +19,7 @@ var ComponentInfo = React.createClass({
         <tr key={i}>
           <td className="component-info-name">{info.name}</td>
           <td className="component-info-desc">
-            <p className="component-info-header">{typesSpan}{info.header}</p>
+            <p className="component-info-header">{typesSpan} {info.header}</p>
             <p>{info.desc}</p>
           </td>
         </tr>

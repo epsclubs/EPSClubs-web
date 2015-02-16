@@ -1,17 +1,30 @@
-# [Material-UI](http://callemall.github.io/material-ui/)
+#EPSClubs web client
 
-This is the documentation site for [Material-UI](http://callemall.github.io/material-ui/).
+###Todo List
+- [x] Setup development environment
+- [ ] Pages
+  - [ ] Home
+  - [ ] Dashboard
+  - [ ] Clubs
+    - [x] List Clubs
+    - [ ] My Clubs
+      - [ ] Manage Club
+        - [ ] Edit Info
+        - [ ] Manage Events
+          - [ ] Create Event
+          - [ ] Edit Event
+          - [ ] Remove Event
+          - [ ] Create Shift
+          - [ ] Edit Shift
+          - [ ] Remove Shift
+          - [ ] Manage Shift Users
+    - [ ] Single Club View
+      - [ ] Join / Leave
+      - [ ] Events
+        - [ ] Shifts
+  - [ ] Shifts
+  - [ ] Messages
+  - [ ] Profile
+- [ ] React router authentication
 
-## Installation
-After cloning the repository, install dependencies:
-```
-cd <project folder>/material-ui
-npm install
-cd <project folder>/material-ui/docs
-npm install
-```
-
-Now you can run your local server:
-```
-npm start
-```
+Testing: `export NODE_ENV=development && npm install && npm start`

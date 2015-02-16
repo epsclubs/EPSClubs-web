@@ -1,0 +1,119 @@
+@club-listing-margin: 0 5px 10px 5px;
+@club-listing-size--default: 100%; // 1 per row
+@club-listing-size--xsmall:50%; // 2 per row
+@club-listing-size--small:33.33333%; // 3 per row
+@club-listing-size--medium:25%; // 4 per row
+@club-listing-size--large:20%; // 5 per row
+
+
+
+.clubs-page {
+  .full-width-section {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+.club-listings {
+
+  * { .ease-out(); }
+
+  .club-listing-heading {
+    .mui-font-style-subhead-1;
+    background-color: @grey-200;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: @desktop-keyline-increment;
+  }
+
+  .club-listing-description {
+    .clear-margin-padding();
+    @line-height: 20px;
+    @lines-to-show: 4;
+
+    background-color: @grey-200;
+    padding: 10px 6px;
+    display: block; // non-webkit fallback
+    display: -webkit-box;
+    height: @line-height*@lines-to-show + 12px; //non-webkit fallback
+    -webkit-line-clamp: @lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .club-listing-image {
+    //Not sure why this is needed but it fixes a display
+    //issue in chrome
+    margin-bottom: -7px;
+  }
+
+  .club-listing-container {
+    //    max-width: 300px;
+    //    margin: 0 auto 10px auto;
+    float: left;
+    width:@club-listing-size--default;
+
+    @media @device-xsmall {
+      width: @club-listing-size--xsmall;
+    }
+    @media @device-small {
+      width: @club-listing-size--small;
+    }
+    @media @device-medium {
+      width: @club-listing-size--medium;
+    }
+    @media @device-large {
+      width: @club-listing-size--large;
+    }
+
+    .club-listing {
+      margin: @club-listing-margin;
+    }
+  }
+
+
+
+//  .club-listing-shared(){
+//    float: left;
+//    margin-right: 4px;
+//    margin-bottom: @desktop-gutter;
+//
+//    &:first-child {
+//      margin-left: -2px;
+//    }
+//
+//    &:last-child {
+//      margin-right: 0;
+//    }
+//  }
+
+//  @media @device-xsmall {
+//    .club-listing {
+//      .club-listing-shared();
+//      width: 48%;
+//    }
+//  }
+//
+//  @media @device-small {
+//    .club-listing {
+//      .club-listing-shared();
+//      width: 32%;
+//    }
+//  }
+//
+//  @media @device-medium {
+//
+//    .feature-container {
+//      .clearfix();
+//      max-width: 906px;
+//    }
+//
+//    .club-listing {
+//      .club-listing-shared();
+//      width: 24%;
+//    }
+//
+//  }
+}

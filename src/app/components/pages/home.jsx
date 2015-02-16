@@ -16,7 +16,7 @@ var HomePage = React.createClass({
           <div className="home-page-hero-content">
             <img className="svg-logo" src="images/material-ui-logo.svg" />
             <div className="tagline">
-              <h1 className="brand-name">material ui</h1>
+              <h1 className="brand-name">Elgin Park Secondary Clubs</h1>
               <h2 className="mui-font-style-headline">
                 A CSS Framework and a Set of React
                 Components <span className="no-wrap">that

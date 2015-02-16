@@ -3,13 +3,18 @@ var React = require('react'),
   mui = require('mui'),
 
   menuItems = [
-    { route: 'get-started', text: 'Get Started' },
-    { route: 'css-framework', text: 'CSS Framework' },
-    { route: 'components', text: 'Components' },
-    { type: mui.MenuItem.Types.SUBHEADER, text: 'Resources' },
-    { type: mui.MenuItem.Types.LINK, payload: 'https://github.com/callemall/material-ui', text: 'GitHub' },
-    { type: mui.MenuItem.Types.LINK, payload: 'http://facebook.github.io/react', text: 'React' },
-    { type: mui.MenuItem.Types.LINK, payload: 'https://www.google.com/design/spec/material-design/introduction.html', text: 'Material Design' }
+    { route: 'get-started', text: 'Getting Started' },
+    //{ route: 'css-framework', text: 'CSS Framework' },
+    { route: 'components', text: 'About Us' },
+    { type: mui.MenuItem.Types.SUBHEADER, text: 'My Account' },
+    { route: 'dashboard', text: 'Dashboard' },
+    { route: 'clubs', text: 'Clubs' },
+    { route: 'shifts', text: 'Shifts' },
+    { route: 'messages', text: 'Messages', number:'5' },
+    { route: 'profile', text: 'Profile' }
+    //{ type: mui.MenuItem.Types.LINK, payload: 'https://github.com/callemall/material-ui', text: 'GitHub' },
+    //{ type: mui.MenuItem.Types.LINK, payload: 'http://facebook.github.io/react', text: 'React' },
+    //{ type: mui.MenuItem.Types.LINK, payload: 'https://www.google.com/design/spec/material-design/introduction.html', text: 'Material Design' }
   ];
 
 var AppLeftNav = React.createClass({

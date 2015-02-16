@@ -11,7 +11,8 @@ module.exports = {
     },
     files: [
       dest + '/**'
-    ]
+    ],
+    logPrefix: "EPSClubs"
   },
   less: {
     src: src + '/less/main.less',
