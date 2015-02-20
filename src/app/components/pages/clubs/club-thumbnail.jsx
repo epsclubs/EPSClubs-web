@@ -24,7 +24,7 @@ var ClubThumbnail = React.createClass({
         <Paper className="club-listing" zDepth={this.state.zDepth}
           onMouseOver={this._onMouseOver} onMouseOut={this._onMouseOut}>
           <h3 className="club-listing-heading">{this.props.heading}</h3>
-          <Link to={this.props.route}><img className="club-listing-image" src={this.props.img} /></Link>
+          <Link to={this.props.route} params={{_id: this.props._id}}><img className="club-listing-image" src={this.props.img} /></Link>
           <p className="club-listing-description">{this.props.description}</p>
         </Paper>
       </div>
